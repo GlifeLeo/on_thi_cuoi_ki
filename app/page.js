@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
+import Link from "next/link"
 import dayjs from "dayjs"
 export default function Home() {
   const [seconds, setSeconds] = useState(3800)
@@ -46,7 +47,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="p-4 w-full bg-black text-white">Menu</div>
+      <div className="p-4 w-full bg-black text-white  flex justify-between">Menu
+        <Link href="/dang-nhap">Login</Link>
+      </div>
       <div className="text-7xl py-10 font-bold">
         {hourString}
         {minuteString}
